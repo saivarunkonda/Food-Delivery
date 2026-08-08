@@ -21,23 +21,23 @@ Build a scalable, real-time order management system for food delivery that handl
 
 ## Architecture
 ```
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐
-│   React     │────▶│  Spring Boot │────▶│ PostgreSQL  │
-│  Frontend   │WebSocket│   Backend   │JDBC  │  Database   │
-└─────────────┘     └──────────────┘     └─────────────┘
-                          │
-                          ▼
-                   ┌──────────────┐
-                   │    Redis     │
-                   │    Cache     │
-                   └──────────────┘
-                          │
-                          ▼
-                   ┌──────────────┐
-                   │   RabbitMQ   │
-                   │   Message    │
-                   │    Queue     │
-                   └──────────────┘
+┌─────────────┐          ┌──────────────┐       ┌─────────────┐
+│   React     │────────▶ |  Spring Boot │ ────▶ │ PostgreSQL  │
+│  Frontend   │WebSocket │   Backend    │ JDBC  │  Database   │
+└─────────────┘          └──────────────┘       └─────────────┘
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │    Redis     │
+                         │    Cache     │
+                         └──────────────┘
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │   RabbitMQ   │
+                         │   Message    │
+                         │    Queue     │
+                         └──────────────┘
 ```
 
 ## Features
